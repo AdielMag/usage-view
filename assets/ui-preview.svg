@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0e14" />
+      <stop offset="100%" stop-color="#141923" />
+    </linearGradient>
+    <linearGradient id="card-grad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#161b26" />
+      <stop offset="100%" stop-color="#11151e" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="card-shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#07090e" rx="16" />
+  
+  <!-- Subtle Ambient Glow -->
+  <circle cx="200" cy="120" r="140" fill="#3b82f6" opacity="0.08" filter="url(#glow)" />
+  <circle cx="560" cy="360" r="160" fill="#8b5cf6" opacity="0.06" filter="url(#glow)" />
+
+  <!-- App Window Container -->
+  <g transform="translate(190, 20)" filter="url(#card-shadow)">
+    <!-- Window Outer Shell -->
+    <rect width="380" height="440" rx="14" fill="#0b0e14" stroke="rgba(255,255,255,0.1)" stroke-width="1" />
+    
+    <!-- Window Header -->
+    <rect width="380" height="42" rx="14" fill="#141924" />
+    <rect y="28" width="380" height="14" fill="#141924" />
+    <line x1="0" y1="42" x2="380" y2="42" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+    
+    <!-- App Brand & Title -->
+    <circle cx="24" cy="21" r="5" fill="#3b82f6" />
+    <text x="36" y="25" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#ffffff" letter-spacing="0.5">Usage View</text>
+    <rect x="110" y="14" width="46" height="15" rx="4" fill="rgba(59,130,246,0.15)" stroke="rgba(59,130,246,0.3)" stroke-width="1" />
+    <text x="118" y="25" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="600" fill="#60a5fa">LIVE</text>
+
+    <!-- Header Actions (Sync & Settings) -->
+    <circle cx="330" cy="21" r="11" fill="rgba(255,255,255,0.05)" />
+    <path d="M327 18 A4 4 0 1 1 333 24 M333 21 L333 24 L330 24" stroke="#9ca3af" stroke-width="1.2" fill="none" stroke-linecap="round" />
+    
+    <circle cx="356" cy="21" r="11" fill="rgba(255,255,255,0.05)" />
+    <circle cx="356" cy="21" r="3" stroke="#9ca3af" stroke-width="1.2" fill="none" />
+
+    <!-- CONTENT BODY -->
+    <!-- Card 1: Claude Pro -->
+    <g transform="translate(12, 54)">
+      <rect width="356" height="175" rx="10" fill="url(#card-grad)" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+      
+      <!-- Card Header -->
+      <rect width="356" height="32" rx="10" fill="#181e2b" />
+      <rect y="22" width="356" height="10" fill="#181e2b" />
+      <line x1="0" y1="32" x2="356" y2="32" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+      
+      <!-- Sparkle Icon + Title -->
+      <path d="M16 16 L18 11 L20 16 L25 18 L20 20 L18 25 L16 20 L11 18 Z" fill="#93c5fd" />
+      <text x="32" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#ffffff">Claude Pro Subscription</text>
+      <text x="342" y="20" font-family="'JetBrains Mono', Consolas, monospace" font-size="9" fill="#94a3b8" text-anchor="end">Pro (Active)</text>
+
+      <!-- Primary Limit: 5-Hour Session -->
+      <g transform="translate(14, 46)">
+        <text x="0" y="10" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#cbd5e1">5-Hour Session Quota</text>
+        <text x="328" y="10" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="700" fill="#ffffff" text-anchor="end">100%</text>
+        <text x="286" y="10" font-family="'JetBrains Mono', Consolas, monospace" font-size="9" fill="#34d399" text-anchor="end">100% ready</text>
+
+        <!-- Progress Bar -->
+        <rect y="16" width="328" height="5" rx="2.5" fill="rgba(255,255,255,0.08)" />
+        <rect y="16" width="328" height="5" rx="2.5" fill="#ffffff" opacity="0.95" />
+      </g>
+
+      <!-- Secondary Limit: Weekly Quota -->
+      <g transform="translate(14, 82)">
+        <line x1="0" y1="0" x2="328" y2="0" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+        <text x="0" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="500" fill="#94a3b8">Weekly Limit</text>
+        <text x="328" y="16" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="700" fill="#ffffff" text-anchor="end">55%</text>
+        <text x="290" y="16" font-family="'JetBrains Mono', Consolas, monospace" font-size="9" fill="#94a3b8" text-anchor="end">resets in 3d 8h</text>
+
+        <rect y="22" width="328" height="5" rx="2.5" fill="rgba(255,255,255,0.08)" />
+        <rect y="22" width="180" height="5" rx="2.5" fill="#ffffff" opacity="0.65" />
+      </g>
+
+      <!-- Secondary Limit: 3P Models -->
+      <g transform="translate(14, 122)">
+        <line x1="0" y1="0" x2="328" y2="0" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+        <text x="0" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="500" fill="#94a3b8">Sonnet 3.7 Thinking Pool</text>
+        <text x="328" y="16" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="700" fill="#ffffff" text-anchor="end">92%</text>
+        
+        <rect y="22" width="328" height="5" rx="2.5" fill="rgba(255,255,255,0.08)" />
+        <rect y="22" width="301" height="5" rx="2.5" fill="#ffffff" opacity="0.75" />
+      </g>
+    </g>
+
+    <!-- Card 2: Antigravity / Google AI Pro -->
+    <g transform="translate(12, 239)">
+      <rect width="356" height="150" rx="10" fill="url(#card-grad)" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+      
+      <!-- Card Header -->
+      <rect width="356" height="32" rx="10" fill="#181e2b" />
+      <rect y="22" width="356" height="10" fill="#181e2b" />
+      <line x1="0" y1="32" x2="356" y2="32" stroke="rgba(255,255,255,0.05)" stroke-width="1" />
+      
+      <!-- Terminal Icon + Title -->
+      <path d="M14 13 L18 16 L14 19 M19 19 L24 19" stroke="#93c5fd" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+      <text x="32" y="21" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#ffffff">Antigravity Subscription</text>
+      <text x="342" y="20" font-family="'JetBrains Mono', Consolas, monospace" font-size="9" fill="#94a3b8" text-anchor="end">Google AI Pro</text>
+
+      <!-- Primary Limit: 5-Hour Session -->
+      <g transform="translate(14, 46)">
+        <text x="0" y="10" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#cbd5e1">5-Hour Session Quota</text>
+        <text x="328" y="10" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="700" fill="#ffffff" text-anchor="end">96%</text>
+        <text x="286" y="10" font-family="'JetBrains Mono', Consolas, monospace" font-size="9" fill="#94a3b8" text-anchor="end">resets in 2h 4m</text>
+
+        <rect y="16" width="328" height="5" rx="2.5" fill="rgba(255,255,255,0.08)" />
+        <rect y="16" width="315" height="5" rx="2.5" fill="#ffffff" opacity="0.9" />
+      </g>
+
+      <!-- Secondary Limit: Weekly Limit -->
+      <g transform="translate(14, 82)">
+        <line x1="0" y1="0" x2="328" y2="0" stroke="rgba(255,255,255,0.04)" stroke-width="1" />
+        <text x="0" y="16" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="500" fill="#94a3b8">Weekly Quota</text>
+        <text x="328" y="16" font-family="'JetBrains Mono', Consolas, monospace" font-size="11" font-weight="700" fill="#ffffff" text-anchor="end">60%</text>
+        <text x="286" y="16" font-family="'JetBrains Mono', Consolas, monospace" font-size="9" fill="#94a3b8" text-anchor="end">resets in 2d 18h</text>
+
+        <rect y="22" width="328" height="5" rx="2.5" fill="rgba(255,255,255,0.08)" />
+        <rect y="22" width="197" height="5" rx="2.5" fill="#ffffff" opacity="0.65" />
+      </g>
+    </g>
+
+    <!-- Footer -->
+    <rect y="405" width="380" height="35" rx="14" fill="#0e121a" />
+    <rect y="405" width="380" height="15" fill="#0e121a" />
+    <line x1="0" y1="405" x2="380" y2="405" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+    <text x="16" y="426" font-family="'JetBrains Mono', Consolas, monospace" font-size="9.5" fill="#64748b">synced just now</text>
+    <text x="364" y="426" font-family="'JetBrains Mono', Consolas, monospace" font-size="9.5" fill="#64748b" text-anchor="end">polling every 3m</text>
+  </g>
+</svg>

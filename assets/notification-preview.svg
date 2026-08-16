@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 120" width="100%" height="100%">
+  <defs>
+    <filter id="toast-shadow" x="-10%" y="-20%" width="120%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <g filter="url(#toast-shadow)">
+    <!-- Toast Body -->
+    <rect x="10" y="10" width="440" height="96" rx="10" fill="#1b202c" stroke="rgba(255,255,255,0.12)" stroke-width="1" />
+    
+    <!-- App Header in Toast -->
+    <circle cx="32" cy="30" r="8" fill="#3b82f6" />
+    <text x="46" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#94a3b8">Usage View</text>
+    <text x="430" y="34" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" fill="#64748b" text-anchor="end">just now</text>
+
+    <!-- Notification Title -->
+    <text x="32" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#ffffff">Quota Refreshed • Claude Pro</text>
+
+    <!-- Notification Message -->
+    <text x="32" y="82" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="400" fill="#cbd5e1">Your 5-Hour Session Quota has reset to 100% capacity. Ready to code!</text>
+  </g>
+</svg>
