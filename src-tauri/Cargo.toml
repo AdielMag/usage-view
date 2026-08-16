@@ -1,0 +1,29 @@
+[package]
+name = "usage-view"
+version = "0.1.0"
+description = "System Tray & Menu Bar Usage Monitor for Claude and Antigravity"
+authors = ["Adiel"]
+edition = "2021"
+
+[lib]
+name = "usage_view_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = ["tray-icon", "image-ico", "image-png"] }
+tauri-plugin-positioner = { version = "2", features = ["tray-icon"] }
+tauri-plugin-notification = "2"
+tauri-plugin-autostart = "2"
+notify-rust = "4"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+chrono = { version = "0.4", features = ["serde"] }
+dirs = "5.0"
+keyring = "3.0"
+log = "0.4"
+env_logger = "0.11"
